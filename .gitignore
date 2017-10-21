@@ -1,0 +1,24 @@
+# C++ objects and libs
+
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+
+*.user
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+
+*build-*
+
+*.DS_Store
+
+*.qm
