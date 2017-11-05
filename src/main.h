@@ -40,7 +40,7 @@ static const int64_t COIN_YEAR_REWARD = 777 * CENT; // 5% per year
 static const int MODIFIER_INTERVAL_SWITCH = 1; // start POS after initial blocks
 static const int LAST_POW_BLOCK = 5000;
 
-static const unsigned int FORK_TIME = 1510444800 // Sunday, November 12, 2017 12:00:00 AM GMT. Reject v1 clients
+static const unsigned int FORK_TIME = 1510444800; // Sunday, November 12, 2017 12:00:00 AM GMT. Reject v1 clients
 
 static const int64_t DEF_COMBINE_AMOUNT = 500 * COIN; 
 static const int64_t MAX_COMBINE_AMOUNT = 100000 * COIN;
