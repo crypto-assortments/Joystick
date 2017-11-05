@@ -1013,69 +1013,87 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear ; // 777 %
    }
    
+   else if (nHeight <= 7000)
+   {
+      nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * 5000 * CENT ; // 5000 %
+   }
+	
    else if (nHeight <= 10000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * 5000 * CENT ; // 5000 %
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 20000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 10 ; // 77 %
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 21000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear * 10 ; // 7777 %
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 50000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 10 ; // 77 %
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 51000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear * 10 ; // 7777 %
+      return nSubsidy + nFees;
    }
 
    else if (nHeight <= 100000)  // 777% halving every 100k blocks
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear ; // 777 %
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 200000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 2 ; // 777 % /2
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 300000)   // 
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 4 ; // 777 % /4
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 400000)   // 
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 8 ; // 777 %  / 8
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 500000)   // 
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 16 ; // 777 % /16
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 600000)   // 
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 32 ; // 777 % /32
+      return nSubsidy + nFees;
    }
    
    else if (nHeight <= 700000)   // 
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear ; // 777 % /64
+      return nSubsidy + nFees;
    }
    
-   else   // resting at 7.77% for eternity
+   else if (nHeight > 700000)  // resting at 7.77% for eternity
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear / 100 ; // 7.77 %
+      return nSubsidy + nFees;
    }
    
     if (fDebug && GetBoolArg("-printcreation"))
