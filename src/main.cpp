@@ -1013,7 +1013,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * nRewardCoinYear ; // 777 %
    }
    
-   else if (nHeight <= 7100)
+   else if (nHeight <= 8000)
    {
       nSubsidy = nCoinAge * 33 / (365 * 33 + 8) * 5000 * CENT ; // 5000 %
    }
