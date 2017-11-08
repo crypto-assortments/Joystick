@@ -15,6 +15,7 @@
 
 using namespace std;
 extern unsigned int nStakeMaxAge;
+extern unsigned int nStakeMaxAge_2;
 
 unsigned int nStakeSplitAge = 7 * 24 * 60 * 60;
 
