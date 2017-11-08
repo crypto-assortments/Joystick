@@ -1537,7 +1537,7 @@ bool CWallet::GetStakeWeight(const CKeyStore& keystore, uint64_t& nMinWeight, ui
         }
 
         // Weight is greater than zero, but the maximum value isn't reached yet
-        if (nTimeWeight > 0 && nTimeWeight < nStakeMaxAge)
+        if (nTimeWeight > 0 && nTimeWeight < (GetAdjustedTime() > FORK_TIME ? nStakeMaxAge_2 : nStakeMaxAge))
         {
             nMinWeight += bnCoinDayWeight.getuint64();
         }
